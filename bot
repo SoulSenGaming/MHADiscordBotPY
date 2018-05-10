@@ -31,7 +31,6 @@ async def quote(ctx):
 async def addquote(ctx, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
   quotes.append("{}".format(arg))
-  quote.write("{}".format(arg))
   
   
 
