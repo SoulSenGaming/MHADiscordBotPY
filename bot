@@ -9,7 +9,6 @@ token = 'NDQyODU2OTc5MTMyODQxOTg0.DdE6Nw.Bfyo-xa-oiq1jELJF7nyzD0Cx74'
 quotes = ["Do Your Best Toshinori",]
 quoteWrite = open("quotes.txt", "w")
 quoteRead = open("quotes.txt", "r")
-randomQuote = random.choice(quoteRead)
 
 @bot.event
 async def on_ready():
