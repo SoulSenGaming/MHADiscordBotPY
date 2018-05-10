@@ -25,7 +25,8 @@ async def about(ctx):
 @bot.command(pass_context=True)
 async def quote(ctx):
   await bot.say (quoteRead.readlines())
-
+  quoteOpen.close()
+  
 @bot.command(pass_context=True)
 async def addquote(ctx, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
