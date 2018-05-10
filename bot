@@ -7,6 +7,8 @@ import random
 bot = commands.Bot(command_prefix='mha!')
 token = 'NDQyODU2OTc5MTMyODQxOTg0.DdE6Nw.Bfyo-xa-oiq1jELJF7nyzD0Cx74'
 quotes = ["Do Your Best Toshinori",]
+quoteWrite = open("quotes.txt", "w")
+quoteRead = open("quotes.txt", "r")
 
 @bot.event
 async def on_ready():
@@ -23,13 +25,13 @@ async def about(ctx):
   
 @bot.command(pass_context=True)
 async def quote(ctx):
-  await bot.say(random.choice(quotes))
+  await bot.say(random.choice(random.choice(quoteRead.readlines())
   
 @bot.command(pass_context=True)
 async def addquote(ctx, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
   quotes.append("{}".format(arg))
-
+  quote.write("{}".format(arg))
   
   
 
