@@ -23,7 +23,7 @@ async def about(ctx):
   
 @bot.command(pass_context=True)
 async def quote(ctx):
-  await bot.say(quotes)
+  await bot.say(random.choice(quotes))
   
 @bot.command(pass_context=True)
 async def addquote(ctx, arg):
