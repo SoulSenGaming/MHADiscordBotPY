@@ -6,8 +6,6 @@ import random
 
 bot = commands.Bot(command_prefix='mha!')
 token = 'NDQyODU2OTc5MTMyODQxOTg0.DdE6Nw.Bfyo-xa-oiq1jELJF7nyzD0Cx74'
-quoteOpen = open("quotes.txt", "a")
-quoteRead = open("quotes.txt", "r")
 quotes = ["Do Your Best Toshinori",]
 
 @bot.event
