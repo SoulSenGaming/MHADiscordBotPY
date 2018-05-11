@@ -5,7 +5,6 @@ import asyncio
 import random 
 
 bot = commands.Bot(command_prefix='mha!')
-token = 'NDQyODU2OTc5MTMyODQxOTg0.DdE6Nw.Bfyo-xa-oiq1jELJF7nyzD0Cx74'
 quotes = ["Do Your Best Toshinori",]
 quoteWrite = open("quotes.txt", "w")
 quoteRead = open("quotes.txt", "r")
@@ -36,4 +35,4 @@ async def addaquote(ctx):
   
 
   
-bot.run(token)
+bot.run(process.env.BOT_TOKEN)
