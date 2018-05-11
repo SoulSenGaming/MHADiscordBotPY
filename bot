@@ -9,6 +9,7 @@ bot = commands.Bot(command_prefix='mha!')
 quotes = ["Do Your Best Toshinori",]
 quoteWrite = open("quotes.txt", "w")
 quoteRead = open("quotes.txt", "r")
+quoteAppend = open(“quotes.txt”, “a”)
 
 @bot.event
 async def on_ready():
@@ -33,7 +34,6 @@ async def quote(ctx):
 async def addaquote(ctx, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
   with open('quotes.txt', 'a') as in_file:
-    quoteAppend = open(“quotes.txt”, “a”)
     quoteAppend.write("{}\n".format(arg))
   
   
