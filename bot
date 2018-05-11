@@ -26,6 +26,7 @@ async def about(ctx):
 @bot.command(pass_context=True)
 async def quote(ctx):
   await bot.say(random.choice(open('quotes.txt').readlines()))
+  quoteRead.close()
   
 @bot.command(pass_context=True)
 async def addaquote(ctx):
