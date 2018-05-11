@@ -9,7 +9,9 @@ bot = commands.Bot(command_prefix='mha!')
 quotes = ["Do Your Best Toshinori",]
 quoteWrite = open("quotes.txt", "w")
 quoteRead = open("quotes.txt", "r")
-
+with open('quotes.txt', 'r') as in_file:
+    quoteAppend = open("quotes.txt", "a")
+    
 
 @bot.event
 async def on_ready():
@@ -26,9 +28,7 @@ async def about(ctx):
   
 @bot.command(pass_context=True)
 async def quote(ctx):
-  with open('quotes.txt', 'r') as in_file:
-    quoteAppend = open("quotes.txt", "a")
-    await bot.say(random.choice(open('quotes.txt').readlines()))
+   await bot.say(random.choice(quoteAppend))
 
   
 @bot.command(pass_context=True)
