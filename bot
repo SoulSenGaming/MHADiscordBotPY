@@ -28,6 +28,9 @@ async def about(ctx):
 async def quote(ctx):
    await bot.say(random.choice(dataRead))
 
+@bot.command(pass_context=True)
+async def quotelist(ctx):
+    await bot.say(dataRead)
   
 @bot.command(pass_context=True)
 async def addaquote(ctx, arg):
