@@ -30,7 +30,7 @@ async def quote(ctx):
 
   
 @bot.command(pass_context=True)
-async def addaquote(ctx):
+async def addaquote(ctx, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
   quotes.append("{}\n".format(arg))
   
