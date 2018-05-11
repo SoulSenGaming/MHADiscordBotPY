@@ -9,7 +9,7 @@ bot = commands.Bot(command_prefix='mha!')
 quotes = ["Do Your Best Toshinori",]
 quoteWrite = open("quotes.txt", "w")
 quoteRead = open("quotes.txt", "r")
-quoteWrite = open("quotes.txt", "a")
+quoteAppend = open("quotes.txt", "a")
 
 @bot.event
 async def on_ready():
