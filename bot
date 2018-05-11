@@ -33,7 +33,7 @@ async def quote(ctx):
 async def addaquote(ctx, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
   with open('quotes.txt', 'w') as in_file:
-    dataWrite = open('quotes.txt', "w')
+    dataWrite = open('quotes.txt', "w")
     dataWrite.write("{}\n".format(arg))
   
   
