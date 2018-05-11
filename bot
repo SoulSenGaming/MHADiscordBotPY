@@ -8,8 +8,8 @@ import os
 bot = commands.Bot(command_prefix='mha!')
 quotes = ["Do Your Best Toshinori",]
 with open('quotes.txt', 'r') as in_file:
-    data = in_file.readlines()
-    
+    dataRead = in_file.readlines()
+
 
 @bot.event
 async def on_ready():
@@ -26,12 +26,15 @@ async def about(ctx):
   
 @bot.command(pass_context=True)
 async def quote(ctx):
-   await bot.say(random.choice(data))
+   await bot.say(random.choice(dataRead))
 
   
 @bot.command(pass_context=True)
 async def addaquote(ctx, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
+  with open('quotes.txt', 'w') as in_file:
+    dataWrite = open('quotes.txt', "w')
+    dataWrite.write("{}\n".format(arg))
   
   
 
