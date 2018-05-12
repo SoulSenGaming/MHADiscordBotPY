@@ -9,7 +9,8 @@ bot = commands.Bot(command_prefix='mha!')
 quotes = ["Do Your Best Toshinori",]
 with open('quotes.txt', 'r') as in_file:
     dataRead = in_file.readlines()
-
+with open('quotes.txt', 'a') as in_file:
+    dataWrite = open('quotes.txt', "a")
 
 @bot.event
 async def on_ready():
@@ -35,9 +36,7 @@ async def quotelist(ctx):
 @bot.command(pass_context=True)
 async def addquote(ctx, *, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
-  with open('quotes.txt', 'w') as in_file:
-    dataWrite = open('quotes.txt', "w")
-    dataWrite.write("{}\n".format(arg))
+  dataWrite.write("{}\n".format(arg))
   
 @bot.command(pass_context=True)
 async def trivia(ctx):
