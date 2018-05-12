@@ -35,11 +35,13 @@ async def quotelist(ctx):
 @bot.command(pass_context=True)
 async def addquote(ctx, *, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
-  with open('quotes.txt', 'w') as in_file:
-    dataWrite = open('quotes.txt', "w")
+  with open('quotes.txt', 'a') as in_file:
+    dataWrite = open('quotes.txt', "a")
     dataWrite.write("{}\n".format(arg))
   
-  
+@bot.command(pass_context=Ture)
+async def trivia(ctx):
+    await bot.say("[Insert Trivia Question Here]")
 
   
 bot.run(os.environ['BOT_TOKEN'])
