@@ -39,7 +39,7 @@ async def addquote(ctx, *, arg):
     dataWrite = open('quotes.txt', "a")
     dataWrite.write("{}\n".format(arg))
   
-@bot.command(pass_context=Ture)
+@bot.command(pass_context=True)
 async def trivia(ctx):
     await bot.say("[Insert Trivia Question Here]")
 
