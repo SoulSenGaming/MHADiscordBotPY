@@ -36,7 +36,7 @@ async def quotelist(ctx):
 async def addquote(ctx, *, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
   with open('quotes.txt', 'a') as in_file:
-    dataWrite = open('quotes.txt', "a")
+    dataWrite = open('quotes.txt', "w")
     dataWrite.write("{}\n".format(arg))
   
 @bot.command(pass_context=True)
