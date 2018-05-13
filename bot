@@ -36,7 +36,7 @@ async def quotelist(ctx):
 @bot.command(pass_context=True)
 async def addquote(ctx, *, arg):
   await bot.say("Quote Successfully Added: {}".format(arg))
-  dataWrite.write("{}\n".format(arg))
+  dataWrite.append("{}\n".format(arg))
   
 @bot.command(pass_context=True)
 async def trivia(ctx):
