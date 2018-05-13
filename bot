@@ -6,7 +6,6 @@ import random
 import os 
 
 bot = commands.Bot(command_prefix='mha!')
-quotes = ["Do Your Best Toshinori",]
 with open('quotes.txt', 'r') as in_file:
     dataRead = in_file.readlines()
     
